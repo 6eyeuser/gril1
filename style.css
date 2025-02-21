@@ -1,0 +1,273 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9fb;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6c2e9d; /* Purple */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.login-btn {
+  background: #6c2e9d;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-background {
+  position: relative;
+  background: url("images/hero-bg.jpg") center/cover no-repeat;
+  padding: 50px 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  color: black;
+  position: relative;
+}
+.hero {
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Adjust height if needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black; /* Keep text visible */
+    font-family: "Poppins", sans-serif;
+    padding: 50px 20px;
+
+    /* Set background image */
+    background: url("hero-bg.png") no-repeat center center;
+    background-size: cover;
+  }
+}
+
+/* Add a semi-transparent gradient overlay effect */
+.hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(164, 100, 255, 0.3),
+    rgba(255, 174, 243, 0.3)
+  );
+  z-index: 1;
+}
+
+/* Ensuring text remains on top */
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+/* CELLS */
+.cells {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increased gap for equal spacing */
+  padding: 50px 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Card Styling */
+.cell {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px; /* Increased width slightly */
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cell:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+/* Image inside the card */
+.cell img {
+  width: 100%;
+  max-height: 150px; /* Restricts large images */
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f5f5f5; /* Light background for image */
+
+  display: block;
+  margin: 0 auto; /* Centers the image inside the card */
+}
+
+/* Title */
+.cell h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Small label below the card */
+.cell::after {
+  content: attr(data-label);
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* EVENT */
+.event {
+  text-align: center;
+  background: #f3e6ff;
+  padding: 20px;
+}
+
+/* CELL DETAILS */
+.cell-details {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cell-card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  border-radius: 10px;
+}
+/* Section for department cards */
+.departments {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Equal spacing on both sides */
+  padding: 50px 10px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.department-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  padding: 25px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.department-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Images */
+.department-card img {
+  width: auto;
+  max-height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Titles */
+.department-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Description */
+.department-card p {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0 20px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.social-links img {
+  width: 20px;
+  margin: 5px;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-bottom {
+  margin-top: 10px;
+}
